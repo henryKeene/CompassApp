@@ -68,20 +68,14 @@ class _CompassPageState extends State<CompassPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Semantics(
-                    label: 'Compass pointing '
-                        '${state.arrowAngle.toStringAsFixed(0)} degrees, '
-                        'distance ${state.distanceKm.toStringAsFixed(1)} '
-                        'kilometers',
-                    child: AnimatedRotation(
-                      turns: _turns,
-                      duration: const Duration(milliseconds: 200),
-                      curve: Curves.easeOut,
-                      child: Icon(
-                        Icons.navigation,
-                        size: 120,
-                        color: colorScheme.primary,
-                      ),
+                  AnimatedRotation(
+                    turns: _turns,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeOut,
+                    child: Icon(
+                      Icons.navigation,
+                      size: 120,
+                      color: colorScheme.primary,
                     ),
                   ),
                   const SizedBox(height: 24),
