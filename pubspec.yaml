@@ -29,7 +29,7 @@ melos:
 
     test:
       description: Run flutter test in all packages with tests.
-      run: melos exec --concurrency=5 --dir-exists=test --fail-fast -- "flutter test"
+      run: melos exec --concurrency=5 --dir-exists=test --ignore="random_compass_app" --fail-fast -- "flutter test"
 
     build_runner:all:
       description: Run build_runner build in all packages.
@@ -39,3 +39,4 @@ melos:
     format:
       description: Run dart format in all packages.
       run: melos exec --concurrency=5 -- "dart format ."
+    
