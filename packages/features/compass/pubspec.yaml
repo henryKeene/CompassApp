@@ -1,0 +1,32 @@
+name: compass
+description: Compass feature - discover random nearby places and navigate with a compass
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+resolution: workspace
+
+dependencies:
+  app_state:
+    path: ../../utilities/app_state
+  location_service:
+    path: ../../utilities/location_service
+  permission_service:
+    path: ../../utilities/permission_service
+  flutter:
+    sdk: flutter
+  flow_builder: ^0.1.0
+  flutter_bloc: ^8.1.5
+  get_it: ^7.7.0
+  http: ^1.2.1
+  flutter_compass: ^0.8.1
+
+dev_dependencies:
+  bdd_widget_test: ^2.1.3
+  build_runner: ^2.4.9
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0

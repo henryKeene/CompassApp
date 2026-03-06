@@ -1,0 +1,41 @@
+name: random_compass_project
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+workspace:
+  - packages/app/random_compass_app
+  - packages/features/compass
+  - packages/features/home
+  - packages/utilities/location_service
+  - packages/utilities/permission_service
+  - packages/utilities/app_state
+
+dependencies:
+  flutter_bloc: ^8.1.5
+  get_it: ^7.7.0
+
+dev_dependencies:
+  build_runner: ^2.4.9
+  melos: ^7.0.0-dev.8
+  very_good_analysis: ^6.0.0
+
+dependency_overrides: {}
+
+melos:
+  scripts:
+    analyze:
+      description: Run flutter analyze in all packages.
+      run: melos exec --concurrency=5 -- "flutter analyze ."
+
+    test:
+      description: Run flutter test in all packages with tests.
+      run: melos exec --concurrency=5 --dir-exists=test --fail-fast -- "flutter test"
+
+    build_runner:all:
+      description: Run build_runner build in all packages.
+      run: melos exec --depends-on=build_runner -- "dart run build_runner build --delete-conflicting-outputs"
+      orderDependents: true
+
+    format:
+      description: Run dart format in all packages.
+      run: melos exec --concurrency=5 -- "dart format ."

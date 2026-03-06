@@ -1,0 +1,27 @@
+# Flutter/Dart
+**/build/
+**/.dart_tool/
+**/.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/pubspec.lock
+
+# FVM
+.fvm/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+
+# Coverage
+coverage/
+
+# Generated
+*.g.dart
+*.gr.dart
+*.freezed.dart
+*.mocks.dart
